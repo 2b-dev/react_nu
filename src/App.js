@@ -12,6 +12,7 @@ import {
 import { ReactComponent as Logo } from "./assets/logo.svg";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./Routes";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -134,7 +135,7 @@ class App extends Component {
           <main style={{ marginTop: "4rem" }}>
             <Routes />
           </main>
-          <MDBFooter color="" className="">
+          <MDBFooter color="" className="nu_footer">
             <p className="footer-copyright mb-0 py-3 text-center">
               &copy; {new Date().getFullYear()} Copyright:{" "}
               <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
