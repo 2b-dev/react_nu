@@ -9,14 +9,13 @@ import {
   MDBFooter,
   MDBNavLink
 } from "mdbreact";
-import { ReactComponent as Logo } from "./assets/logo.svg";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./Routes";
 import "./App.css";
 
 class App extends Component {
   state = {
-    collapseID: ""
+    collapseID: "",
   };
 
   toggleCollapse = collapseID => () =>
@@ -41,10 +40,9 @@ class App extends Component {
     return (
       <Router>
         <div className="flyout">
-          <MDBNavbar color="indigo" dark expand="md" fixed="top" scrolling>
+          <MDBNavbar color="nu_nav" dark expand="md" fixed="top" scrolling transparent className="shadow-none">
             <MDBNavbarBrand href="/">
-              <Logo style={{ height: "2.5rem", width: "2.5rem" }} />
-              MDB React
+              <img src="./assets/images/logo_9konla9.png" className="img-nav-logo" />
             </MDBNavbarBrand>
             <MDBNavbarToggler
               onClick={this.toggleCollapse("mainNavbarCollapse")}
@@ -61,7 +59,7 @@ class App extends Component {
                     to="/"
                     onClick={this.closeCollapse("mainNavbarCollapse")}
                   >
-                    Home
+                    หน้าหลัก
                   </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
@@ -69,7 +67,7 @@ class App extends Component {
                     onClick={this.closeCollapse("mainNavbarCollapse")}
                     to="/css"
                   >
-                    CSS
+                    วิธีบริจาค
                   </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
@@ -77,7 +75,7 @@ class App extends Component {
                     onClick={this.closeCollapse("mainNavbarCollapse")}
                     to="/components"
                   >
-                    Components
+                    ที่มาโครงการ
                   </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
@@ -85,54 +83,14 @@ class App extends Component {
                     onClick={this.closeCollapse("mainNavbarCollapse")}
                     to="/advanced"
                   >
-                    Advanced
+                    เข้าสู่ระบบ
                   </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
-                    onClick={this.closeCollapse("mainNavbarCollapse")}
-                    to="/navigation"
-                  >
-                    Navigation
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
-                    onClick={this.closeCollapse("mainNavbarCollapse")}
-                    to="/forms"
-                  >
-                    Forms
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
-                    onClick={this.closeCollapse("mainNavbarCollapse")}
-                    to="/tables"
-                  >
-                    Tables
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
-                    onClick={this.closeCollapse("mainNavbarCollapse")}
-                    to="/modals"
-                  >
-                    Modals
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
-                    onClick={this.closeCollapse("mainNavbarCollapse")}
-                    to="/addons"
-                  >
-                    Addons
-                  </MDBNavLink>
-                </MDBNavItem>
+                </MDBNavItem>                
               </MDBNavbarNav>
             </MDBCollapse>
           </MDBNavbar>
           {collapseID && overlay}
-          <main style={{ marginTop: "4rem" }}>
+          <main>
             <Routes />
           </main>
           <MDBFooter color="" className="nu_footer">

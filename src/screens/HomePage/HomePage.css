@@ -1,0 +1,7 @@
+.header-index{
+  background-color: #1e3a57;
+  background-image: url('./header-index.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+}

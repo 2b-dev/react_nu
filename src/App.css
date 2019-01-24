@@ -1,3 +1,25 @@
-.nu_footer{
-    background-color: #f00;
+body {
+	background-color: transparent;
+}
+.nu_nav {
+  background-color: #1a334f;
+}
+.img-nav-logo {
+  max-width: 100%;
+  max-height: 70px;
+}
+.nu_footer {
+  background-color: #f00;
+}
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+@media (min-width: 768px){
+    .navbar-expand-md .navbar-nav .nav-link{
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        margin-right: 1rem;
+    }
 }

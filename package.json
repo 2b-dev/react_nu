@@ -2,6 +2,7 @@
   "name": "react_nu",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://localhost/test",
   "dependencies": {
     "mdbreact": "4.9.0",
     "react": "16.7.0",

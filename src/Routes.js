@@ -12,7 +12,7 @@ import ComponentsNavPage from "./pages/ComponentsNavPage";
 // FREE
 import AnimationPage from "./pages/AnimationPage";
 import AlertPage from "./pages/AlertPage";
-import HomePage from "./pages/HomePage";
+import HomePage from "./screens/HomePage/HomePage";
 import ButtonPage from "./pages/ButtonPage";
 import CSSNavPage from "./pages/CSSNavPage";
 import TablePage from "./pages/TablePage";
@@ -58,7 +58,7 @@ class Routes extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/test" component={HomePage} />
         <Route exact path="/css" component={CSSNavPage} />
         <Route exact path="/components" component={ComponentsNavPage} />
         <Route exact path="/advanced" component={AdvancedNavPage} />
